@@ -1,12 +1,12 @@
 import gulp        from 'gulp';
 import runSequence from 'run-sequence';
 
-gulp.task('prod', ['clean'], function (cb) {
+gulp.task('prod', ['clean', 'libs'], function (cb) {
 
   cb = cb || function () { };
 
   global.isProd = true;
 
-  runSequence(['libs', 'styles', 'images', 'fonts', 'views', 'browserify'], 'gzip', cb);
+  runSequence(['styles', 'images', 'fonts', 'views', 'browserify'], 'gzip', cb);
 
 });
