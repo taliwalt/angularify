@@ -1,4 +1,4 @@
-# Angular Browserify Way
+# Angularify
 ![Angular Browserify Way](docs/images/browserify-angularjs.png)
 Is a project structure for developing, testing and deploying AngularJS applications with ES6 (ECMAScript 6) using Browserify bundler.
 
