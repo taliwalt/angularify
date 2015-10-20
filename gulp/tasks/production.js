@@ -1,11 +1,9 @@
-'use strict';
+import gulp        from 'gulp';
+import runSequence from 'run-sequence';
 
-var gulp        = require('gulp');
-var runSequence = require('run-sequence');
+gulp.task('prod', ['clean'], function (cb) {
 
-gulp.task('prod', ['clean'], function(cb) {
-
-  cb = cb || function() {};
+  cb = cb || function () { };
 
   global.isProd = true;
 

@@ -1,9 +1,7 @@
-'use strict';
+import gulp        from 'gulp';
+import runSequence from 'run-sequence';
 
-var gulp        = require('gulp');
-var runSequence = require('run-sequence');
-
-gulp.task('test', ['server'], function() {
+gulp.task('test', ['server'], () => {
 
   return runSequence('unit', 'protractor');
 

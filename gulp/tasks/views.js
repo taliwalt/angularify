@@ -1,17 +1,15 @@
-'use strict';
+import config         from '../config';
+import gulp           from 'gulp';
+import browserSync    from 'browser-sync';
+import gulpLoadPlugins from 'gulp-load-plugins';//load gulp plugins
 
-var config         = require('../config');
-var gulp           = require('gulp');
-var browserSync    = require('browser-sync');
-var gulpLoadPlugins = require('gulp-load-plugins');//load gulp plugins
-
-var $ = gulpLoadPlugins();
+let $ = gulpLoadPlugins();
 // $ = gulp- in the pugin name
 // gulp-if = $.if, gulp-sourcemaps = $.sourcemaps
 // gulp-angular-templatecache = $.angularTemplateCache
 
 // Views task
-gulp.task('views', function() {
+gulp.task('views', () => {
 
   // Put our index.html in the dist folder
   gulp.src('app/index.html')

@@ -1,19 +1,18 @@
-'use strict';
 
-var config       = require('../config');
-var gulp         = require('gulp');
-var source       = require('vinyl-source-stream');
-var buffer       = require('vinyl-buffer');
-var watchify     = require('watchify');
-var browserify   = require('browserify');
-var babelify     = require('babelify');
-var handleErrors = require('../util/handleErrors');
-var browserSync  = require('browser-sync');
-var debowerify   = require('debowerify');
-var ngAnnotate   = require('browserify-ngannotate');
-var gulpLoadPlugins = require('gulp-load-plugins');//load gulp plugins
+import config from '../config';
+import gulp         from 'gulp';
+import source       from 'vinyl-source-stream';
+import buffer       from 'vinyl-buffer';
+import watchify     from 'watchify';
+import browserify from 'browserify';
+import babelify     from 'babelify';
+import handleErrors from '../util/handleErrors';
+import browserSync  from 'browser-sync';
+import debowerify   from 'debowerify';
+import ngAnnotate   from 'browserify-ngannotate';
+import gulpLoadPlugins from 'gulp-load-plugins';//load gulp plugins
 
-var $ = gulpLoadPlugins();
+let $ = gulpLoadPlugins();
 // $ = gulp- in the pugin name
 // gulp-if = $.if, gulp-sourcemaps = $.sourcemaps
 // gulp-angular-templatecache = $.angularTemplateCache
@@ -21,7 +20,7 @@ var $ = gulpLoadPlugins();
 // Based on: http://blog.avisi.nl/2014/04/25/how-to-keep-a-fast-build-with-browserify-and-reactjs/
 function buildScript(file) {
 
-  var bundler = browserify({
+  let bundler = browserify({
     entries: config.browserify.entries,
     debug: true,
     cache: {},
@@ -36,7 +35,7 @@ function buildScript(file) {
     });
   }
 
-  var transforms = [
+  let transforms = [
     { 'name':babelify, 'options': {}},
     { 'name':debowerify, 'options': {}},
     { 'name':ngAnnotate, 'options': {}}
@@ -47,8 +46,8 @@ function buildScript(file) {
   });
 
   function rebundle() {
-    var stream = bundler.bundle();
-    var createSourcemap = config.browserify.prodSourcemap;
+    let stream = bundler.bundle();
+    let createSourcemap = config.browserify.prodSourcemap;
 
     $.util.log('Rebundle...');
 

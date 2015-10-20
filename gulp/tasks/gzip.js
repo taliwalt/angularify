@@ -1,15 +1,13 @@
-'use strict';
+import gulp   from 'gulp';
+import config from '../config';
+import gulpLoadPlugins from 'gulp-load-plugins';//load gulp plugins
 
-var gulp   = require('gulp');
-var config = require('../config');
-var gulpLoadPlugins = require('gulp-load-plugins');//load gulp plugins
-
-var $ = gulpLoadPlugins();
+let $ = gulpLoadPlugins();
 // $ = gulp- in the pugin name
 // gulp-if = $.if, gulp-sourcemaps = $.sourcemaps
 // gulp-angular-templatecache = $.angularTemplateCache
 
-gulp.task('gzip', function() {
+gulp.task('gzip', () => {
 
   return gulp.src(config.gzip.src)
     .pipe($.gzip(config.gzip.options))
