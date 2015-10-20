@@ -1,5 +1,5 @@
 {
-  "name": "angular-browserify-way",
+  "name": "angularify",
   "version": "1.0.0",
   "description": "project to build angularjs project with browserify using gulp task runner with ES6 support",
   "main": "gulpfile.js",

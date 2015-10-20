@@ -1,5 +1,6 @@
 # Angularify
 ![Angular Browserify Way](docs/images/browserify-angularjs.png)
+
 Is a project structure for developing, testing and deploying AngularJS applications with ES6 (ECMAScript 6) using Browserify bundler.
 
 ## Technologies:
@@ -9,7 +10,7 @@ Is a project structure for developing, testing and deploying AngularJS applicati
 ### Getting Started 
 ```sh
 $ git clone https://github.com/yabasha/angularify.git
-$ cd angular-browserify-way
+$ cd angularify
 $ npm install
 ```
 
