@@ -11,12 +11,12 @@
   <!-- endbower -->
   <!-- endbuild -->
 
-  <!-- build:css styles/main.css -->
+  <!-- style:css styles/main.css -->
   <link rel="stylesheet" href="css/main.css">
-  <!-- endbuild -->
+  <!-- endstyle -->
 
-  <!-- build:js scripts/vendor/modernizr.js -->
-  <script src="bower_components/modernizr/modernizr.js"></script>
+  <!-- build:js js/modernizr.js -->
+  <script src="js/modernizr.js"></script>
   <!-- endbuild -->
 </head>
 <body ng-app="app">
@@ -27,8 +27,8 @@
 
 <!--Contents-->
       <ui-view></ui-view>
-<!-- build:js js/bundle.js -->
+<!-- bundle:js js/bundle.js -->
 <script src="js/bundle.js"></script>
-<!-- endbuild -->
+<!-- endbundle -->
 </body>
 </html>
