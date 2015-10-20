@@ -12,7 +12,9 @@ module.exports = {
     'prodSourcemap': false,
     'sassIncludePaths': []
   },
-
+  'source': {
+    'index' : 'app/index.html'
+  },
   'scripts': {
     'src' : 'app/src/**/*.js',
     'dest': 'build/js'
