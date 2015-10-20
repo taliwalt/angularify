@@ -12,7 +12,13 @@ let $ = gulpLoadPlugins();
 gulp.task('views', () => {
 
   // Put our index.html in the dist folder
-  gulp.src('app/index.html')
+  gulp.src(config.source.index)
+    .pipe($.minifyHtml({
+      empty: true,
+      spare: true,
+      quotes: true,
+      conditionals: true
+    }))
     .pipe(gulp.dest(config.dist.root));
 
   // Process any other view files from app/views
