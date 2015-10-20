@@ -1,0 +1,49 @@
+{
+  "name": "angular-browserify-way",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "homepage": "https://github.com/yabasha/angularify.git",
+  "authors": [
+    "Bashar Ayyash <bashar.ayyash@gmail.com>"
+  ],
+  "description": "project to build angularjs project with browserify using gulp task runner with ES6 support",
+  "main": "gulpfile.js",
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "keywords": [
+    "browserify",
+    "gulp",
+    "es6",
+    "angularjs",
+    "bootstrap",
+    "sass"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "modernizr": "~2.8.1"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "assets/stylesheets/_bootstrap.scss",
+        "assets/fonts/bootstrap/*"
+      ]
+    }
+  },
+  "devDependencies": {
+    "components-font-awesome": "https://github.com/components/font-awesome.git#~4.4.0"
+  }
+}
