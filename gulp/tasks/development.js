@@ -1,7 +1,7 @@
 import gulp        from 'gulp';
 import runSequence from 'run-sequence';
 
-gulp.task('dev', ['clean'], (cb) => {
+gulp.task('dev', ['clean', 'libs'], (cb) => {
 
   cb = cb || function () {
     };
