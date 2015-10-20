@@ -8,13 +8,8 @@ var $ = gulpLoadPlugins();
 // gulp-angular-templatecache = $.angularTemplateCache
 
 gulp.task('libs', () => {
-  var assets = $.useref.assets();
 
-  return gulp.src(config.source.index)
-    .pipe(assets)
-    .pipe($.if('*.js', $.uglify()))
-    .pipe($.if('*.css', $.minifyCss()))
-    .pipe(assets.restore())
-    .pipe($.useref())
-    .pipe(gulp.dest(config.dist.root));
+  return gulp.src('app/bower_components/modernizr/modernizr.js')
+    .pipe($.uglify())
+    .pipe(gulp.dest(config.scripts.dest));
 });
