@@ -1,8 +1,7 @@
-
 import faker from 'faker';
 
 export default class RandomName {
-  getName(){
+  getName() {
     this.name = faker.name.findName();
     return this.name;
   }

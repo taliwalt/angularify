@@ -1,5 +1,6 @@
 import angular from 'angular';
-import RandomNameService from './RandomName';
+import RandomName from './RandomName';
+import EncryptDecrypt from './EncryptDecrypt';
 
-export default angular.module('app.services', [RandomNameService])
+export default angular.module('app.services', [RandomName, EncryptDecrypt])
   .name;

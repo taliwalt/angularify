@@ -1,11 +1,14 @@
 
 export default class HomeController {
-  constructor(RandomName){
+  constructor(RandomName, EncryptDecrypt){
     this.project = 'AngularJS Project Built With Browserify Using ES6 Technology.';
-    this.mynamecode = '65c1c47a50f516dc8bbafdd0bbf86895';
+    this.author = 'Bashar Ayyash';
+    this.mynamecode = EncryptDecrypt.encrypt(this.author);
     this.name = 'World';
     this.random = RandomName;
+    this.encryptdecrypt = EncryptDecrypt;
     this.tech = ['AngularJS', 'ECMAScript6', 'Gulp', 'Browserify'];
+    this.block = false;
   }
 
   getTech(){
@@ -19,6 +22,16 @@ export default class HomeController {
   randomName(){
     this.name = this.random.getName();
   }
+
+  encrypt(){
+    this.mynamecode = this.encryptdecrypt.encrypt(this.author);
+    this.block = false;
+  }
+
+  decrypt(){
+    this.mynamecode = this.encryptdecrypt.decrypt(this.mynamecode);
+    this.block = true;
+  }
 }
 
-HomeController.$inject = ['RandomName'];
+HomeController.$inject = ['RandomName', 'EncryptDecrypt'];

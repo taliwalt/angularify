@@ -21,8 +21,14 @@
         {{ home.project }}
       </div>
 
-      <div>
-        <h3 class="heading text-center">My Name: <span class="name-code">{{ home.mynamecode }}</span></h3>
+      <div class="row encryption">
+        <div class="col-lg-6">
+          <h3 class="heading text-right">My Name: <span class="name-code">{{ home.mynamecode }}</span></h3>
+        </div>
+        <div class="col-lg-6 text-center">
+          <button class="btn btn-primary" ng-click="home.encrypt()" ng-disabled="!home.block">Encrypt</button>
+          <button class="btn btn-primary" ng-click="home.decrypt()" ng-disabled="home.block">Decrypt</button>
+        </div>
       </div>
 
       <div class="row">
