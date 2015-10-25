@@ -26,8 +26,8 @@
           <h3 class="heading text-right">My Name: <span class="name-code">{{ home.mynamecode }}</span></h3>
         </div>
         <div class="col-lg-6 text-center">
-          <button class="btn btn-primary" ng-click="home.encrypt()" ng-disabled="!home.block">Encrypt</button>
-          <button class="btn btn-primary" ng-click="home.decrypt()" ng-disabled="home.block">Decrypt</button>
+          <button class="btn btn-primary" ng-click="home.encrypt()" ng-show="home.block">Encrypt</button>
+          <button class="btn btn-primary" ng-click="home.decrypt()" ng-show="!home.block">Decrypt</button>
         </div>
       </div>
 
