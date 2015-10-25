@@ -11,5 +11,5 @@ gulp.task('libs', () => {
 
   return gulp.src('app/bower_components/modernizr/modernizr.js')
     .pipe($.uglify())
-    .pipe(gulp.dest(config.scripts.dest));
+    .pipe(gulp.dest(config.scripts.dest, {overwrite: true}));
 });
