@@ -1,15 +1,13 @@
-'use strict';
-
 /* bundleLogger
  * ------------
  * Provides gulp style logs to the bundle method in browserify.js
  */
 
-var gutil        = require('gulp-util');
-var prettyHrtime = require('pretty-hrtime');
-var startTime;
+import gutil        from 'gulp-util';
+import prettyHrtime from 'pretty-hrtime';
+let startTime;
 
-module.exports = {
+export default {
 
   start: function() {
     startTime = process.hrtime();
