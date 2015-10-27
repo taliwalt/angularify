@@ -1,34 +1,32 @@
-'use strict';
+export const config = {
 
-module.exports = {
-
-  'browserPort'  : 3000,
-  'UIPort'       : 3001,
-  'serverPort'   : 3002,
+  'browserPort': 3000,
+  'UIPort': 3001,
+  'serverPort': 3002,
 
   'styles': {
-    'src' : 'app/styles/**/*.scss',
+    'src': 'app/styles/**/*.scss',
     'dest': 'build/css',
     'prodSourcemap': false,
     'sassIncludePaths': []
   },
 
   'source': {
-    'index' : 'app/index.html'
+    'index': 'app/index.html'
   },
 
   'scripts': {
-    'src' : 'app/src/**/*.js',
+    'src': 'app/src/**/*.js',
     'dest': 'build/js'
   },
 
   'images': {
-    'src' : 'app/images/**/*',
+    'src': 'app/images/**/*',
     'dest': 'build/images'
   },
 
   'fonts': {
-    'src' : ['app/fonts/**/*'],
+    'src': ['app/fonts/**/*'],
     'dest': 'build/fonts'
   },
 
@@ -48,13 +46,13 @@ module.exports = {
   },
 
   'dist': {
-    'root'  : 'build'
+    'root': 'build'
   },
 
   'browserify': {
-    'entries'   : ['./app/src/app.js'],
+    'entries': ['./app/src/app.js'],
     'bundleName': 'bundle.js',
-    'prodSourcemap' : true
+    'prodSourcemap': true
   },
 
   'test': {

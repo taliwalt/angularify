@@ -1,4 +1,4 @@
-import config from '../config';
+import { config } from '../config';
 import gulp   from 'gulp';
 import stylish from 'jshint-stylish';
 import gulpLoadPlugins from 'gulp-load-plugins';//load gulp plugins

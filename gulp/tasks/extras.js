@@ -1,4 +1,4 @@
-import config from '../config';
+import { config } from '../config';
 import gulp from 'gulp';
 
 // copy other files (.htaccess, favicon.ico, robot.txt,,,etc) in the app root folder other than html

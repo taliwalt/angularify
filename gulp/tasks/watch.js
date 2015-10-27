@@ -1,5 +1,5 @@
-import config        from '../config';
-import gulp          from 'gulp';
+import { config } from '../config';
+import gulp       from 'gulp';
 
 gulp.task('watch', ['browserSync', 'server'], () => {
 

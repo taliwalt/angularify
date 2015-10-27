@@ -1,4 +1,4 @@
-import config       from '../config';
+import { config }   from '../config';
 import gulp         from 'gulp';
 import handleErrors from '../util/handleErrors';
 import browserSync  from 'browser-sync';

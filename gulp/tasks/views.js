@@ -1,6 +1,6 @@
-import config         from '../config';
-import gulp           from 'gulp';
-import browserSync    from 'browser-sync';
+import { config }      from '../config';
+import gulp            from 'gulp';
+import browserSync     from 'browser-sync';
 import gulpLoadPlugins from 'gulp-load-plugins';//load gulp plugins
 
 let $ = gulpLoadPlugins();

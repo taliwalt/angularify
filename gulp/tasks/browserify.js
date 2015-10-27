@@ -1,5 +1,5 @@
 
-import config from '../config';
+import { config } from '../config';
 import gulp         from 'gulp';
 import source       from 'vinyl-source-stream';
 import buffer       from 'vinyl-buffer';

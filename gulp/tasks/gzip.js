@@ -1,5 +1,5 @@
-import gulp   from 'gulp';
-import config from '../config';
+import gulp from 'gulp';
+import { config } from '../config';
 import gulpLoadPlugins from 'gulp-load-plugins';//load gulp plugins
 
 let $ = gulpLoadPlugins();
