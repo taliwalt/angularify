@@ -1,7 +1,7 @@
 # Angularify
 ![Angular Browserify Way](docs/images/browserify-angularjs.png)
 
-Is a project structure for developing, testing and deploying AngularJS applications with ES6 (ECMAScript 6) using Browserify bundler.
+Is a boilerplate for developing, testing and deploying AngularJS applications with ES6 (ECMAScript 6) using Browserify bundler.
 
 ## Technologies:
 ![](docs/images/angular.png) ![](docs/images/browserify.png) ![](docs/images/gulp.png) ![](docs/images/es6.png) ![](docs/images/karma.png) ![](docs/images/protractor.png) ![](docs/images/jasmine.png) ![](docs/images/sass.png) 
@@ -33,7 +33,7 @@ $ gulp production
 
 ----------
 ###Documentation
-
+- [gulp tasks](docs/gulp.md)
 
 ----------
 
