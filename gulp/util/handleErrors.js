@@ -1,10 +1,8 @@
-'use strict';
+import notify from 'gulp-notify';
 
-var notify = require('gulp-notify');
+export default function (error) {
 
-module.exports = function(error) {
-
-  if( !global.isProd ) {
+  if (!global.isProd) {
 
     var args = Array.prototype.slice.call(arguments);
 
