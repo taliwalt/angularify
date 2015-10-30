@@ -43,6 +43,8 @@ $ gulp production
 ###License
 <a href="http://en.wikipedia.org/wiki/MIT_License" target="_blank">MIT</a>
 
+###TODO
+- Change sources (js, css, images) urls to cdn urls
 
    [node.js]: <http://nodejs.org>
    [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
