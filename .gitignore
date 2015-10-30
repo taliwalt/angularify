@@ -48,4 +48,5 @@ crashlytics.properties
 crashlytics-build.properties
 
 build/
+app/
 node_modules/
