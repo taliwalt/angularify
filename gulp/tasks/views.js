@@ -11,7 +11,7 @@ let $ = gulpLoadPlugins();
 // Views task
 gulp.task('views', () => {
 
-  // Put our index.html in the dist folder
+  //TODO: CDN replace, cdn url for *.css, *.js
   gulp.src(config.source.index)
     .pipe($.minifyHtml({
       empty: true,
@@ -22,6 +22,7 @@ gulp.task('views', () => {
     .pipe(gulp.dest(config.dist.root));
 
   // Process any other view files from app/views
+  //TODO: CDN replace for images: *.jpg, *.png, *.gif
   return gulp.src(config.views.src)
     .pipe($.angularTemplatecache({
       moduleSystem: 'ES6',
