@@ -30,7 +30,9 @@ $ gulp dev
 $ gulp production
 ```
 
-
+### Deploy
+If you want to deploy your app under subfolder, don't forget to configure `<base href="/subfolder/">` or leave it `<base href="/">` if you want to install it under the root folder.
+ 
 ----------
 ###Documentation
 - [gulp tasks](docs/gulp.md)
