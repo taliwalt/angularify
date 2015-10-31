@@ -30,6 +30,10 @@ export const config = {
     'dest': 'build/fonts'
   },
 
+  'cdn': {
+    'url': 'http://www.cdn.path.com'
+  },
+
   'views': {
     'watch': [
       'app/index.html',
