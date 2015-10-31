@@ -11,8 +11,21 @@ let $ = gulpLoadPlugins();
 // Views task
 gulp.task('views', () => {
 
-  //TODO: CDN replace, cdn url for *.css, *.js
+  //configure cdnizer to be used when global.isProd is true
   gulp.src(config.source.index)
+    .pipe($.if(global.isProd, $.cdnizer({
+        defaultCDNBase: config.cdn.url,
+        files: [
+          {
+            file: 'js/**/*.js'
+          }
+          ,
+          {
+            file: 'css/**/*.css'
+          }
+        ]
+      })
+    ))
     .pipe($.minifyHtml({
       empty: true,
       spare: true,
@@ -22,14 +35,22 @@ gulp.task('views', () => {
     .pipe(gulp.dest(config.dist.root));
 
   // Process any other view files from app/views
-  //TODO: CDN replace for images: *.jpg, *.png, *.gif
   return gulp.src(config.views.src)
+    .pipe($.if(global.isProd, $.cdnizer({
+        defaultCDNBase: config.cdn.url,
+        files: [
+          {
+            file: 'images/**/*'
+          }
+        ]
+      })
+    ))
     .pipe($.angularTemplatecache({
       moduleSystem: 'ES6',
       standalone: true,
       templateFooter: '}]).name;'
     }))
     .pipe(gulp.dest(config.views.dest))
-    .pipe(browserSync.stream({ once: true }));
+    .pipe(browserSync.stream({once: true}));
 
 });
