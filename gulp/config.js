@@ -31,7 +31,7 @@ export const config = {
   },
 
   'cdn': {
-    'url': 'http://www.cdn.path.com'
+    'url': 'http://ayyash-zone.ncci.netdna-cdn.com'
   },
 
   'views': {
