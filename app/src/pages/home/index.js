@@ -1,7 +1,7 @@
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
 
-import routing from './home.routes.js';
+import routing from './home.route.js';
 import HomeCtlr from './home.controller.js';
 import Services from '../../services';
 
