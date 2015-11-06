@@ -33,7 +33,8 @@
   ],
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
-    "modernizr": "~2.8.1"
+    "font-awesome": "~4.4.0",
+    "modernizr": "~3.2.0"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -41,9 +42,13 @@
         "assets/stylesheets/_bootstrap.scss",
         "assets/fonts/bootstrap/*"
       ]
+    },
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.min.css",
+        "fonts/*"
+      ]
     }
   },
-  "devDependencies": {
-    "components-font-awesome": "https://github.com/components/font-awesome.git#~4.4.0"
-  }
+  "devDependencies": {}
 }
