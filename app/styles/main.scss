@@ -1,6 +1,6 @@
 
 // bower:scss
-@import "app/bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
 html, body {
@@ -20,3 +20,7 @@ html, body {
 .heading {
   margin-top: 5px;
 }
+
+/* inject:scss */
+@import "../src/pages/about/about.scss";
+/* endinject */
