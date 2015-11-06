@@ -61,6 +61,7 @@
     "gulp-gzip": "^0.0.8",
     "gulp-if": "^1.2.5",
     "gulp-imagemin": "^1.1.0",
+    "gulp-inject": "^3.0.0",
     "gulp-jshint": "^1.8.3",
     "gulp-karma": "0.0.4",
     "gulp-load-plugins": "^1.0.0",
