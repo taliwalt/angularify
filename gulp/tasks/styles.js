@@ -9,7 +9,7 @@ let $ = gulpLoadPlugins();
 // $ = gulp- in the pugin name
 // gulp-if = $.if, gulp-sourcemaps = $.sourcemaps
 
-gulp.task('styles', () => {
+gulp.task('styles', ['injectStyles'], () => {
 
   let createSourcemap = config.styles.prodSourcemap;
 
