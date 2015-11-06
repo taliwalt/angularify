@@ -8,7 +8,10 @@ export const config = {
     'src': 'app/styles/**/*.scss',
     'dest': 'build/css',
     'prodSourcemap': false,
-    'sassIncludePaths': []
+    'sassIncludePaths': [],
+    'scss': 'app/src/**/*.scss',
+    'mainStyleFile': 'app/styles/main.scss',
+    'stylesFolder': 'app/styles'
   },
 
   'source': {
