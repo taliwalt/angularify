@@ -13,7 +13,7 @@ gulp.task('views', () => {
 
   //configure cdnizer to be used when global.isProd is true
   gulp.src(config.source.index)
-    .pipe($.if(global.isProd, $.cdnizer({
+    .pipe($.if(!global.isProd, $.cdnizer({
         defaultCDNBase: config.cdn.url,
         files: [
           {
@@ -36,7 +36,7 @@ gulp.task('views', () => {
 
   // Process any other view files from app/views
   return gulp.src(config.views.src)
-    .pipe($.if(global.isProd, $.cdnizer({
+    .pipe($.if(!global.isProd, $.cdnizer({
         defaultCDNBase: config.cdn.url,
         files: [
           {
