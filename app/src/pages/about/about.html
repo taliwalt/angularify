@@ -1,0 +1,142 @@
+<script id="template/tabs/tabset.html" type="text/ng-template">
+  <div>
+    <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" ng-transclude></div>
+      <div class="well">
+        <div class="tab-content">
+          <div class="tab-pane fade in"
+               ng-repeat="tab in tabs"
+               ng-class="{active: tab.active}"
+               uib-tab-content-transclude="tab">
+          </div>
+        </div>
+      </div>
+
+  </div>
+</script>
+
+<script id="template/tabs/tab.html" type="text/ng-template">
+    <div class="btn-group" role="group">
+      <button type="button" class="btn" ng-class="{'btn-primary': active, disabled: disabled}" data-toggle="tab"
+              ng-click="select()">
+        <div class="hidden-xs" uib-tab-heading-transclude>{{heading}}</div>
+      </button>
+    </div>
+</script>
+
+<div class="col-lg-12 col-sm-12">
+  <div class="card hovercard">
+    <div class="card-background">
+      <img class="card-bkimg" alt="{{ about.profile.name }}" ng-src="images/me/pic1.jpg">
+    </div>
+    <div class="useravatar">
+      <img alt="{{ about.profile.name }}" ng-src="images/me/pic1.jpg">
+    </div>
+    <div class="card-info"> <span class="card-title">{{ about.profile.name }}</span>
+
+    </div>
+  </div>
+  <uib-tabset>
+    <uib-tab>
+      <uib-tab-heading>
+        <span class="fa fa-smile-o" aria-hidden="true"></span>
+        <div class="hidden-xs">{{ about.profile.tab }}</div>
+      </uib-tab-heading>
+      <div class="content">
+
+        <h3 class="text-center">{{ about.profile.title }}</h3>
+
+        <p>
+          {{ about.profile.intro1 }}
+        </p>
+
+        <p>
+          {{ about.profile.intro2 }}
+        </p>
+        <h5>{{ about.profile.works.intro }}</h5>
+        <ul id="check-list-box" class="list-group checked-list-box">
+          <li class="list-group-item">{{ about.profile.works.types[0].title }}
+            <ul>
+              <li>{{ about.profile.works.types[0].subtask1 }}</li>
+              <li>{{ about.profile.works.types[0].subtask2 }}</li>
+              <li>{{ about.profile.works.types[0].subtask2 }}</li>
+            </ul>
+          </li>
+          <li class="list-group-item" data-color="success">{{ about.profile.works.types[1].title }}</li>
+          <li class="list-group-item" data-color="info">{{ about.profile.works.types[2].title }}</li>
+          <li class="list-group-item" data-color="warning">{{ about.profile.works.types[3].title }}</li>
+        </ul>
+        <div class="container content">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <div class="testimonials">
+                <div class="active item">
+                  <blockquote><p>{{ about.profile.acc }}</p></blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p>{{ about.profile.deliver }}</p></div>
+        <div class="ng-exp">
+          <img ng-src="images/icons/angular.png" alt="Bashar Ayyash AngularJS Professional"/>
+
+          <p>{{ about.profile.experience }}</p>
+        </div>
+        <div class="general-exp">
+          <p>{{ about.profile.workflow }}
+            <a href="http://gulpjs.com/" target="_blank"><img ng-src="images/icons/gulp.png"
+                                                              alt="Bashar Ayyash gulp expert"/></a>
+            <a href="http://browserify.org/" target="_blank"><img ng-src="images/icons/browserify.png"
+                                                                  alt="Bashar Ayyash browserify professional"/></a>
+            <a href="https://nodejs.org/en/docs/es6/" target="_blank"><img ng-src="images/icons/es6.png"
+                                                                           alt="Bashar Ayyash ECMAScript6 experienced"/></a>
+            <a href="http://sass-lang.com/" target="_blank"><img ng-src="images/icons/sass.png"
+                                                                 alt="Bashar Ayyash SASS professional"/></a>
+          </p>
+        </div>
+        <div class="contact">
+          <p>{{ about.profile.projects }}</p>
+
+          <p>
+            {{ about.profile.ask }}
+          </p>
+        </div>
+      </div>
+    </uib-tab>
+    <uib-tab>
+      <uib-tab-heading>
+        <span class="fa fa-cogs" aria-hidden="true"></span>
+        <div class="hidden-xs">{{ about.skills.tab }}</div>
+      </uib-tab-heading>
+      <div class="content">
+        <h3>{{ about.skills.title }}</h3>
+        <ul>
+          <li ng-repeat="skill in about.skills.allSkills">{{ skill }}</li>
+        </ul>
+      </div>
+    </uib-tab>
+    <uib-tab>
+      <uib-tab-heading>
+        <span class="fa fa-phone" aria-hidden="true"></span>
+        <div class="hidden-xs">{{ about.contact }}</div>
+      </uib-tab-heading>
+      <div class="social-contents">
+        <div class="col-md-12 text-center social-contacts">
+          <ul class="social-network social-circle">
+            <li><a href="mailto:bashar@ayyash.info?subject=Query" class="icoRss" title="email"><i
+              class="fa fa-envelope"></i></a></li>
+            <li><a href="https://www.facebook.com/bayyash" class="icoFacebook" title="Facebook"><i
+              class="fa fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/bayyash" class="icoTwitter" title="Twitter"><i
+              class="fa fa-twitter"></i></a></li>
+            <li><a href="https://plus.google.com/+BasharAyyash/posts" class="icoGoogle" title="Google +"><i
+              class="fa fa-google-plus"></i></a></li>
+            <li><a href="https://www.linkedin.com/profile/preview?locale=en_US&trk=prof-0-sb-preview-primary-button"
+                   class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </uib-tab>
+  </uib-tabset>
+</div>
