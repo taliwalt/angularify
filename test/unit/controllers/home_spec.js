@@ -18,8 +18,8 @@ describe('Controller: Home', function() {
     expect(ctrl.name).toBe('World');
   });
 
-  it('should have a mynamecode variable equal to 65c1c47a50f516dc8bbafdd0bbf86895', function() {
-    expect($controller('HomeController').mynamecode).toEqual('65c1c47a50f516dc8bbafdd0bbf86895');
+  it('should have a mynamecode variable equal to 268fc798206338512950e51efa', function() {
+    expect($controller('HomeController').mynamecode).toEqual('268fc798206338512950e51efa');
   });
 
   it('should have a \<project\> variable equal to \'AngularJS Project Built With Browserify Using ES6 Technology.\'', function() {
