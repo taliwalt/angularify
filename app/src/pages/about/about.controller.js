@@ -1,5 +1,5 @@
 export default class About {
-  constructor($window) {
+  constructor() {
     this.profile = {
       name: `Bashar Ayyash`,
       tab: `About Me`,
@@ -40,19 +40,7 @@ export default class About {
       allSkills: [`Main Technologies: JavaScript, HTML5, CSS3, AngularJS, browserify, NodeJS, gulp, git`, `Open Source Contributions: AngularJS, Angularify and various JS libraries`, `Community: Meet-up speaker, conference speaker, workshop giver, Frontend`, `Volunteer: Mosque participations, UNV crisis maps, contribute schools projects`, `Hobbies:Faith, family, friends, writing`]
     };
     this.contact = 'Contact';
-    this.vertical = false;
-    this.justified = true;
-    this.tabs = [
-      { title:'Dynamic Title 1', content:'Dynamic content 1' },
-      { title:'Dynamic Title 2', content:'Dynamic content 2', disabled: true }
-    ];
-
-    this.alertMe = () => {
-      setTimeout(function() {
-        $window.alert(`You\'ve selected the alert tab!`);
-      });
-    };
   }
 }
 
-About.$inject = ['$window'];
+About.$inject = [];
